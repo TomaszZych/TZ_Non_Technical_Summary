@@ -18,13 +18,13 @@
       top: 0;
       width: 100%;
       background: #111;
-      padding: 15px;
+      padding: 12px;
       z-index: 1000;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -34,8 +34,9 @@
     }
 
     section {
-      padding: 80px 20px;
-      min-height: 100vh;
+      padding: 60px 20px;
+      min-height: auto;
+      margin-top: 40px;
     }
 
     h1 {
@@ -45,7 +46,7 @@
     #wordCountBox {
       background: #fff;
       padding: 10px 20px;
-      margin: 80px 20px 0 20px;
+      margin: 20px auto;
       border-radius: 8px;
       font-weight: bold;
       width: fit-content;
@@ -57,7 +58,7 @@
       padding: 30px;
       background: #111;
       color: white;
-      margin-top: 50px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -71,12 +72,8 @@
     <a href="#impact">Potential for Impact</a>
     <a href="#methodology">Methodology</a>
     <a href="#results">Results</a>
-    <a href="#considerations">Additional Considerations</a>
     <a href="#references">References</a>
   </nav>
-
-  <!-- Word Counter -->
-  <div id="wordCountBox">Word Count: <span id="wordCount">0</span></div>
 
   <!-- Sections -->
   <section id="project">
@@ -146,15 +143,13 @@
     Convergence tests showed that reducing the timestep consistently improved accuracy, confirming that the numerical integrators were implemented correctly.</p>
   </section>
 
-  <section id="considerations">
-    <h1>Additional Considerations</h1>
-    <p>No additional considerations provided.</p>
-  </section>
-
   <section id="references">
     <h1>References</h1>
     <p>[1] <a href="https://www.sci-tech-today.com/stats/satellite-launch-statistics/" target="_blank">Satellite Launch Statistics</a></p>
   </section>
+
+  <!-- Word Counter at Bottom -->
+  <div id="wordCountBox">Word Count: <span id="wordCount">0</span></div>
 
   <footer>
     Website by Tomasz Zychowicz
