@@ -112,6 +112,14 @@
     <strong>Realistic physical models</strong><br>
     The simulator includes the major forces that influence satellites: Earth’s gravity (including its uneven shape), the gravitational pull of the Sun and Moon, atmospheric drag, solar radiation pressure, and Earth’s magnetic field. Most of these models are implemented as idealised versions of the real physics so that the behaviour remains realistic while still being computationally manageable. A clear example is the cylindrical shadow model, which simplifies how the Earth blocks sunlight by treating the shadow as a straight cylinder rather than modelling its true tapered shape. This level of idealisation keeps the simulation transparent and easy to understand, while still allowing users to interpret the effect of each force accurately.
     <br><br>
+    <figure style="text-align: center; margin: 20px 0;">
+    <img src="cylindrical_shadow.drawio.svg" 
+         alt="Cylindrical Shadow Diagram" 
+         style="max-width: 100%; height: auto;">
+    <figcaption style="font-size: 0.9em; color: #555; margin-top: 6px;">
+        Cylindrical shadow model used to approximate Earth’s shadow in the simulation.
+    </figcaption>
+    </figure>
     <strong>Real data</strong><br>
     The positions of the Sun and Moon at the start of each simulation come from a NASA database. This ensures that the simulation begins with accurate conditions. Atmospheric density and Earth’s non-uniform gravity is determined using measured data from the atmosphere.
     <br><br>
