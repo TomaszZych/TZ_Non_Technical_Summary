@@ -21,14 +21,14 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: linear-gradient(90deg, #0a0a0a, #1a1a1a);
+      background: #b3e5ff; /* light blue */
       padding: 14px 20px;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.25);
     }
-  
+    
     nav a {
-      color: white;
+      color: #003a66; /* dark blue text */
       margin: 0 14px;
       text-decoration: none;
       font-weight: 600;
@@ -36,8 +36,8 @@
       padding-bottom: 4px;
       transition: color 0.3s ease;
     }
-  
-    /* Animated underline */
+    
+    /* Animated underline in darker blue */
     nav a::after {
       content: "";
       position: absolute;
@@ -45,19 +45,19 @@
       bottom: 0;
       width: 0%;
       height: 2px;
-      background: #00b7ff;
+      background: #006bb3; /* darker blue */
       transition: width 0.3s ease;
     }
-  
+    
     nav a:hover {
-      color: #00b7ff;
+      color: #006bb3;
     }
-  
+    
     nav a:hover::after {
       width: 100%;
     }
-  
-    /* Section styling */
+    
+    /* Section fade-in animation with blue tint */
     section {
       padding: 80px 20px;
       margin: 60px auto;
@@ -69,39 +69,27 @@
       transform: translateY(20px);
       animation: fadeIn 0.8s ease forwards;
     }
-  
-    /* Smooth fade-in animation */
+    
+    /* Darker blue fade-in */
     @keyframes fadeIn {
-      to {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+        box-shadow: 0 0 0 rgba(0,107,179,0); /* no glow */
+      }
+      100% {
         opacity: 1;
         transform: translateY(0);
+        box-shadow: 0 0 12px rgba(0,107,179,0.15); /* subtle dark-blue glow */
       }
     }
-  
-    h1 {
-      margin-top: 0;
-      font-weight: 700;
-      color: #0a3d62;
-    }
-  
-    /* Word count box */
-    #wordCountBox {
-      background: #fff;
-      padding: 12px 22px;
-      margin: 30px auto;
-      border-radius: 10px;
-      font-weight: 600;
-      width: fit-content;
-      box-shadow: 0 0 8px rgba(0,0,0,0.15);
-      border-left: 4px solid #00b7ff;
-    }
-  
+    
     /* Footer */
     footer {
       text-align: center;
       padding: 35px;
-      background: #111;
-      color: white;
+      background: #b3e5ff; /* light blue */
+      color: #003a66;       /* dark blue text */
       margin-top: 60px;
       font-size: 0.95rem;
       letter-spacing: 0.5px;
