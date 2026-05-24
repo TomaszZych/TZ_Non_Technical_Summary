@@ -228,12 +228,23 @@
   <!-- Word Counter Script -->
   <script>
     function countWords() {
-      const text = document.body.innerText;
-      const words = text.trim().split(/\s+/).length;
+      // Select all text elements EXCEPT headings + captions
+      const elements = document.querySelectorAll(
+        "section p, section div, section span, section li"
+      );
+  
+      let text = "";
+      elements.forEach(el => {
+        text += " " + el.innerText;
+      });
+  
+      const words = text.trim().split(/\s+/).filter(w => w.length > 0).length;
       document.getElementById("wordCount").innerText = words;
     }
+  
     countWords();
   </script>
+
 
 </body>
 </html>
